@@ -390,8 +390,8 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../frontend/public/index.html'));
 });
 
-app.listen(PORT, () => {
-  console.log(`\n✅ WhatsApp CRM running at http://localhost:${PORT}`);
-  console.log(`📡 Webhook endpoint: http://localhost:${PORT}/webhook`);
+app.listen(PORT, '0.0.0.0', () => {
+  console.log(`\n✅ WhatsApp CRM running at http://0.0.0.0:${PORT}`);
+  console.log(`📡 Webhook endpoint: http://0.0.0.0:${PORT}/webhook`);
   console.log(`🗄️  Database: whatsapp.db\n`);
 });
